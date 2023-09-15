@@ -1,0 +1,21 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  NITSAN\NsMobile\Command\TestScheduler:
+    tags:
+      - name: console.command
+        command: "NsMobile:cleandata"
+        description: "A command that delete data from data-base which is already deleted."
+        schedulable: true
+        hidden: false
+
+  NITSAN\NsMobile\EventListener\Joh316PasswordInvalidator:
+    tags:
+      - name: event.listener
+        identifier: 'myJoh316PasswordInvalidator'
+
+
+

@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="container ">
+	<h3 class="card-body text-center fw-500">Insert Details</h3>
+
+	<table class="table ">
+		<tr>
+			<td>
+				<f:translate key="tx_nsmobile_domain_model_mobile.model"></f:translate>
+			</td>
+			<td colspan="2">
+				<f:form.textfield class="form-control " property="model.modelName" id="modelName" />
+			</td>
+
+		</tr>
+		<tr>
+			<td>
+				<f:translate key="tx_nsmobile_domain_model_mobile.brand"></f:translate>
+			</td>
+
+			<td colspan="2">
+				<f:form.textfield class="form-control" property="brand.brandName" id="brandName" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<f:translate key="tx_nsmobile_domain_model_mobile.price" />
+			</td>
+			<td colspan="2">
+				<f:form.textfield class="form-control " property="price" id="price" />
+		</tr>
+		
+		<tr>
+			<td>
+				<f:translate key="tx_nsmobile_domain_model_mobile.feature" />
+			</td>
+			<td colspan="2">
+				<f:form.textfield class="form-control " property="feature" id="feature" />
+			</td>
+		</tr>
+		</tr>
+
+	</table>
+</div>
+
+</html>

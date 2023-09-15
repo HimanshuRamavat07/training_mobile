@@ -1,0 +1,36 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <el>
+                    <settings.number>
+                        <TCEforms>
+                            <label> LLL:EXT:ns_mobile/Resources/Private/Language/locallang_db.xlf:tx_nsmobile_domain_model_mobile.flexform</label>
+                            <config>
+                              <type>input</type>
+                              <size>2</size>
+                              <eval>int</eval>
+                          </config>
+                      </TCEforms>
+                  </settings.number>
+                  <settings.orderBy>
+                    <label>orderBy
+                    </label>
+                    <config>
+                        <type>select</type>
+                        <itemsProcFunc>NITSAN\NsMobile\Hooks\ItemsProcFunc->user_orderBy
+                        </itemsProcFunc>
+                        <renderType>selectSingle</renderType>
+                        <items>
+                            <!-- empty by default -->
+                        </items>
+                    </config>
+                </settings.orderBy>
+            </el>
+        </ROOT>
+    </sDEF>
+</sheets>
+</T3DataStructure>

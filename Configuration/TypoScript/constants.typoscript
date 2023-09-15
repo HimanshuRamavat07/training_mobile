@@ -1,0 +1,50 @@
+plugin.tx_nsmobile_mobileplugin {
+    view {
+        # cat=plugin.tx_nsmobile_mobileplugin/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ns_mobile/Resources/Private/Templates/
+        # cat=plugin.tx_nsmobile_mobileplugin/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ns_mobile/Resources/Private/Partials/
+        # cat=plugin.tx_nsmobile_mobileplugin/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ns_mobile/Resources/Private/Layouts/
+    }
+
+
+    # cat=plugin.tx_nsmobile_mobileplugin/other; type=color; label=insert color
+   bgCol = red
+   file {
+    # cat=plugin.tx_nsmobile_mobileplugin/other; type=string; label=insert image path
+    toplogo = fileadmin/logo.gif
+    }
+    # cat=plugin.tx_nsmobile_mobileplugin/other; type=int[10-20]; label=add width
+    topimg{
+    width = 200
+    file.pic2 = fileadmin/logo2.gif
+}
+
+}
+
+settings {
+        #cat=settings/number; type=int[1-5]; label=Number of item shows in frontend
+        number = 3
+}
+
+module.tx_nsmobile_backp1 {
+    
+    view {
+        # cat=module.tx_nsmobile_backp1/file; type=string; label=Path to template root (BE)
+        templateRootPath = EXT:ns_mobile/Resources/Private/Backend/Templates/
+        # cat=module.tx_nsmobile_backp1/file; type=string; label=Path to template partials (BE)
+        partialRootPath = EXT:ns_mobile/Resources/Private/Backend/Partials/
+        # cat=module.tx_nsmobile_backp1/file; type=string; label=Path to template layouts (BE)
+        layoutRootPath = EXT:ns_mobile/Resources/Private/Backend/Layouts/
+
+    }
+    
+persistence{
+    # cat=module.tx_nsmobile_backp1; type=int; label= Storage pid
+    storagePid = 
+
+}
+}
+
+

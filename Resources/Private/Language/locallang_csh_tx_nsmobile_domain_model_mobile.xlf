@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ns_mobile/Resources/Private/Language/locallang_csh_tx_nsmobile_domain_model_mobile.xlf" date="2022-11-21T06:45:00Z" product-name="ns_mobile">
+		<header/>
+		<body>
+			<trans-unit id="image.description" resname="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="price.description" resname="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="feature.description" resname="feature.description">
+				<source>feature</source>
+			</trans-unit>
+			<trans-unit id="model.description" resname="model.description">
+				<source>model</source>
+			</trans-unit>
+			<trans-unit id="brand.description" resname="brand.description">
+				<source>brand</source>
+			</trans-unit>
+			<trans-unit id="all.description" resname="all.description">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="select_brand.description" resname="select_brand.description">
+				<source>Select brand</source>
+			</trans-unit>
+			<trans-unit id="add.description" resname="add.description">
+				<source>Add New Mobile</source>
+			</trans-unit>
+			<trans-unit id="show.description" resname="show.description">
+				<source>Show</source>
+			</trans-unit>
+			<trans-unit id="try.description" resname="try.description">
+				<source>Try something else....</source>
+			</trans-unit>
+			<trans-unit id="no_result.description" resname="no_result.description">
+				<source>No search results found:</source>
+			</trans-unit>
+			<trans-unit id="filter.description" resname="filter.description">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="name.description" resname="name.description">
+				<source>Enter Name</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>Enter Email</source>
+			</trans-unit>
+			<trans-unit id="quer.description" resname="quer.description">
+				<source>Query</source>
+			</trans-unit>
+			<trans-unit id="flexform.description" resname="flexform.description">
+				<source>Items per page</source>
+			</trans-unit>
+			<trans-unit id="id.description" resname="id.description">
+				<source>Id</source>
+			</trans-unit>
+			<trans-unit id="CType.description" resname="CType.description">
+				<source>CType</source>
+			</trans-unit>
+			<trans-unit id="items.description" resname="items.description">
+				<source>No of items per page</source>
+			</trans-unit>
+			<trans-unit id="storage.description" resname="storage.description">
+				<source>Record Storage page</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

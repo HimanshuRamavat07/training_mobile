@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>Listing for Mobile</h1>
+
+    <f:flashMessages />
+
+    <table class="tx_nsmobile">
+        <tr>
+            <th><f:translate key="tx_nsmobile_domain_model_mobile.image" /></th>
+            <th><f:translate key="tx_nsmobile_domain_model_mobile.price" /></th>
+            <th><f:translate key="tx_nsmobile_domain_model_mobile.feature" /></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <f:for each="{mobiles}" as="mobile">
+            <tr>
+                <td><f:link.action action="show" arguments="{mobile : mobile}">{mobile.image.originalResource.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{mobile : mobile}">{mobile.price}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{mobile : mobile}">{mobile.feature}</f:link.action></td>
+                <td><f:link.action action="edit" arguments="{mobile : mobile}">Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{mobile : mobile}">Delete</f:link.action></td>
+            </tr>
+        </f:for>
+    </table>
+
+    <f:link.action action="new">New Mobile</f:link.action>
+</f:section>
+</html>

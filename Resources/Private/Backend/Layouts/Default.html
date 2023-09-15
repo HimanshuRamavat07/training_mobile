@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<be:moduleLayout>
+    <f:be.pageRenderer />
+
+    <be:moduleLayout.menu identifier="ModuleMenu">
+        <be:moduleLayout.menuItem label="Overview" uri="{f:uri.action(controller: 'Backend', action: 'list')}" />
+        <be:moduleLayout.menuItem label="Create new Mobile"
+            uri="{f:uri.action(controller: 'Backend', action: 'new')}" />
+        <be:moduleLayout.menuItem label="Overview" uri="{f:uri.action(controller: 'Technology', action: 'list')}" />
+        <be:moduleLayout.menuItem label="Create new Technology"
+            uri="{f:uri.action(controller: 'Technology', action: 'new')}" />
+        <be:moduleLayout.menuItem label="Overview" uri="{f:uri.action(controller: 'Model', action: 'list')}" />
+        <be:moduleLayout.menuItem label="Create new Model" uri="{f:uri.action(controller: 'Model', action: 'new')}" />
+        <be:moduleLayout.menuItem label="Overview" uri="{f:uri.action(controller: 'Brand', action: 'list')}" />
+        <be:moduleLayout.menuItem label="Create new Brand" uri="{f:uri.action(controller: 'Brand', action: 'new')}" />
+        <be:moduleLayout.menuItem label="Overview" uri="{f:uri.action(controller: 'Accessories', action: 'list')}" />
+        <be:moduleLayout.menuItem label="Create new Accessories"
+            uri="{f:uri.action(controller: 'Accessories', action: 'new')}" />
+    </be:moduleLayout.menu>
+
+    <f:render section="Buttons" />
+    <be:moduleLayout.button.shortcutButton displayName="Shortcut" />
+
+    <f:render section="Content" />
+</be:moduleLayout>
+
+</html>

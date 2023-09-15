@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+  <div class="container shadow p-3 mb-5 bg-body rounded card">
+
+    
+    <f:render partial="FormErrors" />
+    
+    <f:form action="update" name="mobile" object="{mobile}" >
+      <f:render partial="Mobile/FormFields" arguments="{_all}" />
+      
+    </f:form>
+  </div>
+</f:section>
+</html>

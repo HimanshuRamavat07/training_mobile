@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ns_mobile/Resources/Private/Language/locallang_db.xlf" date="2022-11-21T06:45:00Z" product-name="ns_mobile">
+		<header/>
+		<body>
+			<trans-unit id="tx_nsmobile_domain_model_mobile" resname="tx_nsmobile_domain_model_mobile">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.image" resname="tx_nsmobile_domain_model_mobile.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.price" resname="tx_nsmobile_domain_model_mobile.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.feature" resname="tx_nsmobile_domain_model_mobile.feature">
+				<source>Feature</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.model" resname="tx_nsmobile_domain_model_mobile.model">
+				<source>Model</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.brand" resname="tx_nsmobile_domain_model_mobile.brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_technology" resname="tx_nsmobile_domain_model_technology">
+				<source>Technology</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_technology.technology_name" resname="tx_nsmobile_domain_model_technology.technology_name">
+				<source>Technology Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model" resname="tx_nsmobile_domain_model_model">
+				<source>Model</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model.model_name" resname="tx_nsmobile_domain_model_model.model_name">
+				<source>Model Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model.ram" resname="tx_nsmobile_domain_model_model.ram">
+				<source>Ram</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model.rom" resname="tx_nsmobile_domain_model_model.rom">
+				<source>Rom</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model.accessories" resname="tx_nsmobile_domain_model_model.accessories">
+				<source>Accessories</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_model.technology" resname="tx_nsmobile_domain_model_model.technology">
+				<source>Technology</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_brand" resname="tx_nsmobile_domain_model_brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_brand.brand_name" resname="tx_nsmobile_domain_model_brand.brand_name">
+				<source>Brand Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_accessories" resname="tx_nsmobile_domain_model_accessories">
+				<source>Accessories</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_accessories.name" resname="tx_nsmobile_domain_model_accessories.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ns_mobile_mobileplugin.name" resname="tx_ns_mobile_mobileplugin.name">
+				<source>Mobile Plugin</source>
+			</trans-unit>
+			<trans-unit id="tx_ns_mobile_mobileplugin.description" resname="tx_ns_mobile_mobileplugin.description">
+				<source>Use this plugin for View all mobile data.</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.select_brand" resname="tx_nsmobile_domain_model_mobile.select_brand">
+				<source>Select brand</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.select_technology" resname="tx_nsmobile_domain_model_mobile.select_technology">
+				<source>Select Technology</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.select_model" resname="tx_nsmobile_domain_model_mobile.select_model">
+				<source>Select Model</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.add" resname="tx_nsmobile_domain_model_mobile.add">
+				<source>Add New Mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.all" resname="tx_nsmobile_domain_model_mobile.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_display_size" resname="tx_nsmobile_display_size">
+				<source>Select Size</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.show" resname="tx_nsmobile_domain_model_mobile.show">
+				<source>Show</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.try" resname="tx_nsmobile_domain_model_mobile.try">
+				<source>Try something else....</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.no_result" resname="tx_nsmobile_domain_model_mobile.no_result">
+				<source>No search results found:</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.filter" resname="tx_nsmobile_domain_model_mobile.filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.name" resname="tx_nsmobile_domain_model_mobile.name">
+				<source>Enter Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.email" resname="tx_nsmobile_domain_model_mobile.email">
+				<source>Enter Email</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.query" resname="tx_nsmobile_domain_model_mobile.query">
+				<source>Query</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.flexform" resname="tx_nsmobile_domain_model_mobile.flexform">
+				<source>Items per page</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.id" resname="tx_nsmobile_domain_model_mobile.id">
+				<source>Id</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.CType" resname="tx_nsmobile_domain_model_mobile.CType">
+				<source>CType</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.items" resname="tx_nsmobile_domain_model_mobile.items">
+				<source>No of items per page</source>
+			</trans-unit>
+			<trans-unit id="tx_nsmobile_domain_model_mobile.storage" resname="tx_nsmobile_domain_model_mobile.storage">
+				<source>Record Storage Page</source>
+			</trans-unit>
+			<trans-unit id="header" resname="header">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+
+	</file>
+</xliff>

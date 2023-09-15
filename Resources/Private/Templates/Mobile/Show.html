@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    
+    <f:render partial="Mobile/Properties" arguments="{mobile:mobile}" />
+
+    <div class="container shadow p-3 mb-5 bg-body rounded card my-5 ">
+
+        <div class="card-header fw-bold text-center"><h3>Inquiry Section</h3></div>
+        <f:form action="inquiry" name="mobile" method="post">
+
+            <table class="table my-4">
+                <f:form.hidden name="uid" value="{mobile.uid}" />
+                <f:form.hidden name="image" value="{mobile.image.originalResource.publicUrl}" />
+                <tr>
+                    <td>
+                        <f:translate key="tx_nsmobile_domain_model_mobile.name"></f:translate>
+                    </td>
+                    <td colspan="2">
+                        <f:form.textfield class="form-control " name="username" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <f:translate key="tx_nsmobile_domain_model_mobile.email"></f:translate>
+                    </td>
+
+                    <td colspan="2">
+                        <f:form.textfield class="form-control" name="email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <f:translate key="tx_nsmobile_domain_model_mobile.query"></f:translate>
+                    </td>
+                    <td colspan="2">
+                        <f:form.textarea class="form-control" name="textarea" />
+                    </tr>
+                </table>
+                <div class="container d-flex justify-content-center">
+                    <f:form.submit name="submit" value="     send     " class="btn btn-secondary" />
+                </div>
+            </f:form>
+
+        </div>
+    </f:section>
+
+    </html>

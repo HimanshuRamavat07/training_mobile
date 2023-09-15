@@ -1,0 +1,18 @@
+// wizards
+mod {
+    wizards.newContentElement.wizardItems.plugins {
+        elements {
+            mobileplugin {
+                iconIdentifier = ns_mobile-plugin-mobileplugin
+                title = LLL:EXT:ns_mobile/Resources/Private/Language/locallang_db.xlf:tx_ns_mobile_mobileplugin.name
+                description = LLL:EXT:ns_mobile/Resources/Private/Language/locallang_db.xlf:tx_ns_mobile_mobileplugin.description
+                tt_content_defValues {
+                    CType = list
+                    list_type = nsmobile_mobileplugin
+                }
+            }
+        }
+        show = *
+    }
+}
+mod.web_layout.tt_content.preview.list.nsmobile_mobileplugin = EXT:ns_mobile/Resources/Private/Templates/Preview/MyPlugin.html

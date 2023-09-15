@@ -1,0 +1,144 @@
+plugin.tx_nsmobile_mobileplugin {
+    view {
+        templateRootPaths.0 = EXT:ns_mobile/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_nsmobile_mobileplugin.view.templateRootPath}
+        partialRootPaths.0 = EXT:ns_mobile/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_nsmobile_mobileplugin.view.partialRootPath}
+        layoutRootPaths.0 = EXT:ns_mobile/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_nsmobile_mobileplugin.view.layoutRootPath}
+
+        
+    }
+
+
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+   
+settings{
+    number = {$settings.number}
+}
+    
+}
+page.includeCSS {
+    icon = https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css
+    icon.external = 1
+
+    css = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+    css.external = 1
+}
+
+page.includeJSFooter {
+       js = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+       js.external = 1
+       200 = EXT:ns_mobile/Resources/Public/js/main.js
+    }
+
+
+# Module configuration
+module.tx_nsmobile_web_nsmobilebackp1{
+    view {
+        templateRootPaths.0 = EXT:ns_mobile/Resources/Private/Backend/Templates/
+        partialRootPaths.0 = EXT:ns_mobile/Resources/Private/Backend/Partials/
+        layoutRootPaths.0 = EXT:ns_mobile/Resources/Private/Backend/Layouts/
+    }
+
+    persistence{
+    # cat=module.tx_nsmobile_backp1; type=int; label= Storage pid
+    storagePid = {$module.tx_nsmobile_web_nsmobilebackp1}
+
+}
+  
+}
+config.admPanel = 1
+
+listAction = PAGE
+listAction {
+	typeNum = 3641520565487
+	config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/json
+        xhtml_cleaning = 0
+        no_cache = 1
+        admPanel = 0
+    
+	}
+
+
+	10 = USER
+	10 < styles.content.get  
+	10 {
+    	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    	extensionName = NsMobile
+    	pluginName = Mobileplugin
+    	vendorName = NITSAN
+    	controller = Mobile
+    	switchableControllerActions {
+        	Mobile {
+            	1 = list
+        	}
+    	}
+
+    	# This block also added extra for get plugin settings in ajax call...
+    	stdWrap.trim = 1
+    	select {
+        	where = list_type = "nsmobile_mobileplugin"
+    	}
+    	renderObj < tt_content.list.20.nsmobile_mobileplugin
+	}
+}
+
+
+// use default/general ContainerProcessor
+tt_content.b13-2cols-with-header-container < lib.contentElement
+tt_content.b13-2cols-with-header-container {
+  templateName = 2ColsWithHeader
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+  }
+}
+
+
+#use of constant
+page = PAGE
+page {
+    typeNum = 0
+    bodyTag = <body bgColor="{$bgCol}">
+    110 = IMAGE
+    110.file = {$file.toplogo}
+}
+
+#multivalue
+myObject = TEXT
+myObject.value (
+    <p class="warning">
+    This is Html code.
+    </p>
+)
+
+#copy object
+myOtherObject < myObject
+
+
+
+#condition 
+[loginUser(*) or ip('127.0.0.1')]
+    page.120 = TEXT
+    page.120 {
+        value = only for logged in users or local setup
+        stdWrap.case = upper
+    }
+[GLOBAL]
+
+
+[date("j") == 9]
+   page.210.value = It is the 9th day of the month!
+[ELSE]
+   page.210.value = It is NOT the 9th day of the month!
+[END]

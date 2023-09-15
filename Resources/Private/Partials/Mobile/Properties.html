@@ -1,0 +1,107 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="container shadow p-3 mb-5 bg-body rounded card">
+  <h3 class="card-body text-center fw-500">Details</h3>
+
+  <table class="table">
+    <tr>
+      <td style="width: 50%">
+        <f:translate key="tx_nsmobile_domain_model_mobile.image" />
+      </td>
+      <td>
+        <f:if condition="{mobile.image}">
+          <f:then>
+            <f:image src="{mobile.image.originalResource.publicUrl}" width="200" />
+          </f:then>
+        </f:if>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_mobile.model"></f:translate>
+      </td>
+      <td>
+        <f:format.html>{mobile.model.modelName}</f:format.html>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_mobile.brand"></f:translate>
+      </td>
+
+      <td>
+        <f:format.html>{mobile.brand.brandName}</f:format.html>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_mobile.price" />
+      </td>
+      <td>
+        <f:format.currency currencySign="₹ " decimalSeparator="." thousandsSeparator="," prependCurrency="TRUE"
+          separateCurrency="FALSE">{mobile.price}</f:format.currency>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_technology" />
+      </td>
+
+      <td>
+        <f:format.html>{mobile.model.technology.technologyName}</f:format.html>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_model.ram"></f:translate>
+      </td>
+
+      <td>
+        <f:format.html>{mobile.model.ram}</f:format.html>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_model.rom"></f:translate>
+      </td>
+
+      <td>
+        <f:format.html>{mobile.model.rom}</f:format.html>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_accessories"></f:translate>
+      </td>
+
+      <td>
+        <ul>
+          <f:for each="{mobile.model.accessories}" as="accessories">
+            <li>
+              {accessories.name}
+            </li>
+          </f:for>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <f:translate key="tx_nsmobile_domain_model_mobile.feature" />
+      </td>
+      <td>
+        <f:format.html>{mobile.feature}</f:format.html>
+      </td>
+    </tr>
+    </tr>
+
+  </table>
+  <div class="d-flex justify-content-center mx-5">
+    <f:link.action action="edit" arguments="{mobile : mobile}"><button class="btn btn-outline-secondary mx-5">Edit
+        details</button> </f:link.action>
+    <f:link.action action="list"><button class="btn btn-secondary mx-5"> Back to list</button></f:link.action><br />
+    <f:link.action action="delete" arguments="{mobile : mobile}"><button class="btn btn-outline-danger mx-5 "
+        onclick="return confirm('are you sure?')">Delete</button> </f:link.action>
+  </div>
+</div>
+
+</html>

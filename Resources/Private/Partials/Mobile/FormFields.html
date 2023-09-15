@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="container ">
+		<h3 class="card-body text-center fw-500"> Details</h3>
+		<table class="table ">
+			<tr>
+				<td>
+					<f:translate key="tx_nsmobile_domain_model_mobile.brand"></f:translate>
+				</td>
+				<td colspan="2">
+					<f:form.select class="form-select" property="brand.brandName">
+						<f:form.select.option>select</f:form.select.option>
+						<f:for each="{brands}" as="brand" >
+							<f:form.select.option value="{brand.brandName}">{brand.brandName}</f:form.select.option>
+						</f:for>
+					</f:form.select>
+				</td>
+	
+			</tr>
+			<tr>
+				<td>
+					<f:translate key="tx_nsmobile_domain_model_mobile.model"></f:translate>
+				</td>
+	
+				<td colspan="2">
+					<f:form.select class="form-select" property="model.modelName">
+						<f:form.select.option>select</f:form.select.option>
+						<f:for each="{model}" as="model">
+							<f:form.select.option value="{model.modelName}">{model.modelName}</f:form.select.option>
+						</f:for>
+					</f:form.select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<f:translate key="tx_nsmobile_domain_model_mobile.price" />
+				</td>
+				<td colspan="2">
+					<f:form.textfield class="form-control " property="price" id="price" value="0" />
+			</tr>
+			
+			<tr>
+				<td>
+					<f:translate key="tx_nsmobile_domain_model_mobile.feature" />
+				</td>
+				<td colspan="2">
+					<f:form.textfield class="form-control " property="feature" id="feature" />
+				</td>
+			</tr>
+			<tr >
+				<td colspan="2" >
+					<div class="d-flex justify-content-center">
+						<f:form.submit value="Save" class="btn btn-secondary  "/>
+					</div>
+				</td>
+			</tr>
+				
+		</table>
+	</div>
+</html>

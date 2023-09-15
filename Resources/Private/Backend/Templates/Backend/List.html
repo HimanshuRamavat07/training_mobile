@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Buttons">
+    <be:moduleLayout.button.linkButton icon="actions-add"
+        title="{f:translate(id: 'LLL:EXT:backend/Resources/Private/Language/locallang_layout.xlf:newRecordGeneral')}"
+        link="{f:uri.action(controller: 'Backend', action: 'new')}" />
+</f:section>
+
+<f:section name="Content">
+    <f:be.tableList tableName="tx_nsmobile_domain_model_mobile" fieldList="{0: 'image'}" storagePid="{id}" levels="2"
+        recordsPerPage="20" sortField="name" sortDescending="true" readOnly="false" enableClickMenu="true"
+        clickTitleMode="edit" enableControlPanels="true" />
+</f:section>
+
+</html>

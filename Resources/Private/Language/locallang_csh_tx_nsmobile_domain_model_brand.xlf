@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ns_mobile/Resources/Private/Language/locallang_csh_tx_nsmobile_domain_model_brand.xlf" date="2022-11-21T06:45:00Z" product-name="ns_mobile">
+		<header/>
+		<body>
+			<trans-unit id="brand_name.description" resname="brand_name.description">
+				<source>brandName</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,10 @@
+#cat=login; type=string; label=logo: If set, this logo will use instead of .... 
+loginLogo = 
+
+style{
+#cat=color; type=options[Black=dark,primary=primary]; label=Select color which is display in the frontend....
+bgColor = Black
+
+#cat=color; type=options[White=light,Green=success]; label=Select color which is Apply in the font....
+fontcolor = White
+}

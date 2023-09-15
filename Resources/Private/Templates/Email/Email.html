@@ -1,0 +1,101 @@
+<f:layout name="SystemEmail" />
+<f:section name="Title">{headline}</f:section>
+<f:section name="Main">
+   <div class="container">
+      <h3 class="text-center"> Query : - </h3> 
+      <h4 class="text-dark">{query}</h4>
+   </div>
+
+   <table class="table">
+      <tr>
+         <td style="width: 50%">
+            <f:translate key="tx_nsmobile_domain_model_mobile.image" extensionName="nsMobile"/>
+         </td>
+         <td>
+            <f:if condition="{mobile.image}">
+               <f:then>
+                  <img src="https://introduction.ddev.site/{mobile.image.originalResource.publicUrl}" alt="" width="200">
+               </f:then>
+            </f:if>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_mobile.model" extensionName="nsMobile"/>
+         </td>
+         <td>
+            <f:format.html>{mobile.model.modelName}</f:format.html>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_mobile.brand" extensionName="nsMobile"/>
+         </td>
+         <td>
+            <f:format.html>{mobile.brand.brandName}</f:format.html>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_mobile.price" extensionName="nsMobile"/>
+         </td>
+         <td>
+            <f:format.currency currencySign="₹ " decimalSeparator="." thousandsSeparator="," prependCurrency="TRUE"
+            separateCurrency="FALSE">{mobile.price}</f:format.currency>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_technology" extensionName="nsMobile"/>
+         </td>
+
+         <td>
+            <f:format.html>{mobile.model.technology.technologyName}</f:format.html>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_model.ram" extensionName="nsMobile"/>
+         </td>
+
+         <td>
+            <f:format.html>{mobile.model.ram}</f:format.html>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_model.rom" extensionName="nsMobile"/>
+         </td>
+
+         <td>
+            <f:format.html>{mobile.model.rom}</f:format.html>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_accessories" extensionName="nsMobile"/>
+         </td>
+
+         <td>
+            <ul>
+               <f:for each="{mobile.model.accessories}" as="accessories">
+                  <li>
+                     {accessories.name}
+                  </li>
+               </f:for>
+            </ul>
+         </td>
+      </tr>
+
+      <tr>
+         <td>
+            <f:translate key="tx_nsmobile_domain_model_mobile.feature" extensionName="nsMobile"/>
+         </td>
+         <td>
+            <f:format.html>{mobile.feature}</f:format.html>
+         </td>
+      </tr>
+   </tr>
+
+</table>
+</f:section>
