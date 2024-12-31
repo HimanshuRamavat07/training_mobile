@@ -16,8 +16,6 @@ use Symfony\Component\Mime\Address;
 use TYPO3\CMS\Core\Mail\FluidEmail;
 use TYPO3\CMS\Core\Mail\Mailer;
 use \TYPO3\CMS\Core\Core\Environment;
-use Microsoft\Dynamics\Dynamics;
-use Microsoft\Dynamics\Model;
 
 
 /**
@@ -159,78 +157,6 @@ class MobileController extends \NITSAN\NsMobile\Controller\DataController
                 'color' => $extensionSetting,
             ],
         );
-
-        $var = [
-            'pagination' => [
-                'currentPage' => $currentPage,
-                'paginator' => $paginator,
-                'pagination' => $pagination,
-                'allpage' => $allpage,
-                'mobile' => $itemsToBePaginated,
-                'mobiles' => $mobiles
-            ],
-            'prevPage' => $prevPage,
-            'nextPage' => $nextPage,
-            'modelName' => $modelName,
-            'technologyName' => $technologyName,
-            'brandName' => $brandName,
-            'brand' => $brand,
-            'model' => $model,
-            'technology' => $technology,
-            'color' => $extensionSetting,
-        ];
-
-
-        /* $strr = "this,ndi,ndinval,ue";
-
-        $val = \TYPO3\CMS\Core\Utility\ArrayUtility::flatten($var, $prefix = '');
-        $ararry = array("Volvo", "BMW", "Toyota");
-        $val1 = \TYPO3\CMS\Core\Utility\ArrayUtility::arrayExport($ararry, $level = 1);
-
-
-        $str =  \TYPO3\CMS\Core\Utility\StringUtility::getUniqueId($prefix = 'id');
-
-        $version =  \TYPO3\CMS\Core\Utility\VersionNumberUtility::getCurrentTypo3Version();
-        $csv = \TYPO3\CMS\Core\Utility\CsvUtility::csvToArray($strr);
-
-        DebuggerUtility::var_dump($version  , __FILE__ . ' - Line no: ' . __LINE__);
-        DebuggerUtility::var_dump($str  , __FILE__ . ' - Line no: ' . __LINE__);
-        DebuggerUtility::var_dump($val, __FILE__ . ' - Line no: ' . __LINE__);
-        DebuggerUtility::var_dump($val1, __FILE__ . ' - Line no: ' . __LINE__);
-        DebuggerUtility::var_dump($ararry, __FILE__ . ' - Line no: ' . __LINE__);
-        DebuggerUtility::var_dump($csv, __FILE__ . ' - Line no: ' . __LINE__);
-
-        $ararry22 = \TYPO3\CMS\Core\Utility\DebugUtility::viewArray($ararry);
-
-         $sdsd = GeneralUtility::array2xml( $ararry,$NSprefix = '',$level = 0,$docTag = 'phparray',$spaceInd = 0);
-         DebuggerUtility::var_dump($sdsd  , __FILE__ . ' - Line no: ' . __LINE__);
-         DebuggerUtility::var_dump($ararry22  , __FILE__ . ' - Line no: ' . __LINE__);
-         */
-        debug($var);
-
-    $instanceUrl = 'https://contoso.crm.dynamics.com';
-    $accessToken = 'xxx';
-
-    $dynamics = new \Microsoft\Dynamics\Dynamics();
-    $dynamics->setInstanceUrl($instanceUrl)
-             ->setAccessToken($accessToken);
-
-    $leads = $dynamics->createRequest("GET", "/leads")
-                  ->setReturnType(Model\Lead::class)
-                  ->execute();
-
-    $lead = $leads[0];
-
-    echo "Hello, I am $lead->getFirstName() ";
-
-    // OR GET a specific lead by ID
-
-    $lead = $dynamics->createRequest("GET", "/leads(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)")
-                  ->setReturnType(Model\Lead::class)
-                  ->execute();
-
-    echo "Hello, I am $lead->getFirstName() ";
-
 
          return $this->htmlResponse();
     }

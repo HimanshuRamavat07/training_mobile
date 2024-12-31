@@ -52,7 +52,6 @@ function jsPagination(data, model, technology, brandName) {
     http.open('POST', url, true);
     http.onreadystatechange = function () {
         if (http.readyState == 4 && http.status == 200) {
-
             var template = document.createElement('template');
             template.innerHTML = this.responseText;
             var data = template.content.querySelector('#table-data');

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true                      // Optional: Include source maps
+  },
+  "include": ["Resources/Public/assets/js/src/**/*"],            // Ensure it includes your source files
+  "exclude": ["node_modules"]
+}

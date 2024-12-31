@@ -19,7 +19,7 @@ class RamViewHelper extends AbstractTagBasedViewHelper
 
     public function render()
     {
-        $ram = $this->arguments['ram'] ?? this->renderChildren();
+        $ram = $this->arguments['ram'] ?? $this->renderChildren();
        
         if($ram == '4GB' || $ram == '4 GB')
         {

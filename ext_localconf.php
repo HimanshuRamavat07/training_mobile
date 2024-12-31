@@ -23,10 +23,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php'][
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['nsMobile_updateWizard']
    = \NITSAN\NsMobile\Updates\UpdateWizard::class;
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][]
-= \NITSAN\NsMobile\Hooks\DataHandlerHook::class;
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][]
-   = \NITSAN\NsMobile\Hooks\DataHandlerHook::class;
+//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][]
+//= \NITSAN\NsMobile\Hooks\DataHandlerHook::class;
+//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][]
+//   = \NITSAN\NsMobile\Hooks\DataHandlerHook::class;
 
 
-    

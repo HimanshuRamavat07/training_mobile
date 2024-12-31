@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx esbuild Resources/Public/assets/js/src/index.ts --bundle --outfile=Resources/Public/assets/js/dist/main.js --platform=node --target=es2016",
+    "start": "node Resources/Public/assets/js/dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "esbuild": "^0.24.2"
+  }
+}
